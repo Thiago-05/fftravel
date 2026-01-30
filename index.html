@@ -1,60 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>F&F Travel</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <h1>F&F Travel</h1>
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="sobre.html">Sobre</a>
-    <a href="grupos.html">Viagens em Grupo</a>
-    <a href="blog.html">Dicas</a>
-    <a href="depoimentos.html">Depoimentos</a>
-    <a href="contato.html">Contato</a>
-  </nav>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">F&F TRAVEL</a>
+
+    <nav class="navlinks">
+      <a href="sobre.html">Sobre nós</a>
+      <a href="grupos.html">Viagens em grupo exclusivas</a>
+      <a href="blog.html">Dicas</a>
+      <a href="depoimentos.html">Depoimentos</a>
+      <a class="nav-cta" href="contato.html">Contato</a>
+    </nav>
+  </div>
 </header>
 
-<div class="hero">
-  <h2>Viagens de experiências pensadas para quem valoriza tempo, conforto e autenticidade.</h2>
-</div>
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-card">
+        <h2>Viagens de experiências exclusivas</h2>
+        <p>Curadoria personalizada para viajantes exigentes — sem pressa, sem improviso, com alma.</p>
+        <a class="btn" href="contato.html">Solicitar cotação →</a>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <h3 class="section-title">Quem Somos</h3>
-  <p>
-    Criamos roteiros sob medida para viajantes que buscam mais do que destinos: buscam vivências,
-    histórias e conexões reais. Cada viagem é pensada com sensibilidade, atenção aos detalhes
-    e profundo conhecimento dos destinos.
-  </p>
-</section>
+  <section class="section">
+    <div class="container">
+      <h3 style="text-align:center; font-size:2rem;">O que fazemos</h3>
+      <p class="kicker" style="text-align:center; max-width:780px; margin: 10px auto 0;">
+        Transformamos viagens em memórias inesquecíveis, desenhadas especialmente para você.
+      </p>
+      <hr class="sep"/>
 
-<section>
-  <h3 class="section-title">Por que viajar com a F&F Travel</h3>
-  <div class="cards">
-    <div class="card">Atendimento próximo e humano</div>
-    <div class="card">Curadoria de hotéis e experiências</div>
-    <div class="card">Planejamento completo e personalizado</div>
-    <div class="card">Viagens sem improviso, com alma</div>
+      <div class="grid3" style="margin-top:22px;">
+        <article class="card">
+          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=70');"></div>
+          <div class="card-body">
+            <h4 class="card-title">Viagens personalizadas</h4>
+            <p class="card-text">Roteiros sob medida, respeitando seu estilo, ritmo e desejos.</p>
+            <a class="card-link" href="contato.html">Solicitar cotação →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1600&q=70');"></div>
+          <div class="card-body">
+            <h4 class="card-title">Viagens em grupo exclusivas</h4>
+            <p class="card-text">Grupos pequenos e guiados, com roteiros diferenciados e curadoria.</p>
+            <a class="card-link" href="grupos.html">Saiba mais →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac5?auto=format&fit=crop&w=1600&q=70');"></div>
+          <div class="card-body">
+            <h4 class="card-title">Curadoria de experiências</h4>
+            <p class="card-text">Experiências únicas, hotéis e serviços para uma viagem perfeita.</p>
+            <a class="card-link" href="sobre.html">Saiba mais →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="panel">
+        <h3 style="font-size:2rem;">Sobre nós</h3>
+        <p style="color:var(--muted); margin-top:10px;">
+          A F&F Travel nasceu do desejo de transformar viagens em experiências memoráveis.
+          Atuamos como travel designers, criando roteiros sob medida e viagens em grupo cuidadosamente desenhadas,
+          sempre com olhar curatorial, fornecedores premium e atenção aos detalhes.
+        </p>
+        <a class="btn" href="sobre.html" style="margin-top:16px;">Saiba mais →</a>
+      </div>
+
+      <div class="media-hero" aria-label="Imagem editorial"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container highlight">
+      <div class="highlight-photo" aria-label="Imagem de experiência"></div>
+      <div class="panel">
+        <p class="kicker">Viagens em grupo exclusivas</p>
+        <h3 style="font-size:2rem; margin-top:6px;">Vinhos do Uruguai — Montevidéu</h3>
+        <p style="color:var(--muted); margin-top:10px;">
+          Uma experiência de enoturismo cuidadosamente desenhada, combinando vinícolas icônicas,
+          alta gastronomia e hospedagem boutique. :contentReference[oaicite:1]{index=1}
+        </p>
+        <a class="btn" href="uruguai.html">Quero receber informações →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center;">
+    <div>© F&F Travel — Viagens de Experiência</div>
+    <div>
+      <a href="https://wa.me/5511949361782" target="_blank">WhatsApp</a> ·
+      <a href="https://www.instagram.com/turistareviajar/" target="_blank">@turistareviajar</a>
+    </div>
   </div>
-</section>
-
-<section style="text-align:center;">
-  <h3 class="section-title">Viagem em Destaque</h3>
-  <p>Vinhos do Uruguai — Montevidéu | 28 a 31 de Maio</p>
-  <a class="btn" href="uruguai.html">Ver detalhes</a>
-</section>
-
-<footer>
-  <p>F&F Travel — Viagens de Experiência</p>
-  <p>
-    <a href="https://wa.me/5511949361782">WhatsApp</a> |
-    <a href="https://www.instagram.com/turistareviajar/" target="_blank">@turistareviajar</a>
-  </p>
 </footer>
+
+<a class="whats-float" href="https://wa.me/5511949361782" target="_blank" aria-label="Falar no WhatsApp">
+  <span class="whats-dot"></span>
+  <span>Falar no WhatsApp</span>
+</a>
 
 </body>
 </html>
