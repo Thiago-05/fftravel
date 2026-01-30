@@ -1,71 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sobre nós | F&F Travel</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <h1>F&F Travel</h1>
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="sobre.html">Sobre</a>
-    <a href="grupos.html">Viagens em Grupo</a>
-    <a href="blog.html">Dicas</a>
-    <a href="depoimentos.html">Depoimentos</a>
-    <a href="contato.html">Contato</a>
-  </nav>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">F&F TRAVEL</a>
+    <nav class="navlinks">
+      <a href="sobre.html">Sobre nós</a>
+      <a href="grupos.html">Viagens em grupo exclusivas</a>
+      <a href="blog.html">Dicas</a>
+      <a href="depoimentos.html">Depoimentos</a>
+      <a class="nav-cta" href="contato.html">Contato</a>
+    </nav>
+  </div>
 </header>
 
-<section>
-  <h2 class="page-title">Sobre nós</h2>
-
-  <p>
-    Criamos roteiros sob medida para viajantes que buscam mais do que destinos: buscam vivências,
-    histórias e conexões reais. Selecionamos experiências e hotéis que traduzem o estilo, o propósito
-    e o momento de cada viajante — com planejamento completo, atenção aos detalhes e curadoria.
-  </p>
-
-  <div class="cards" style="margin-top:40px;">
-    <div class="card">
-      <h3>Missão</h3>
-      <p>
-        Criar viagens sob medida, com curadoria cuidadosa e atendimento humano, conectando pessoas
-        a experiências autênticas com conforto e propósito.
-      </p>
+<main>
+  <section class="section">
+    <div class="container split">
+      <div class="panel">
+        <p class="kicker">Sobre nós</p>
+        <h2 style="font-size:2.4rem; margin-top:6px;">Curadoria, sensibilidade e atenção aos detalhes</h2>
+        <p style="color:var(--muted); margin-top:12px;">
+          A F&F Travel nasceu do desejo de transformar viagens em experiências memoráveis.
+          Atuamos como travel designers, criando roteiros sob medida e viagens em grupo cuidadosamente desenhadas —
+          sempre com olhar curatorial, fornecedores premium e um planejamento que respeita o seu ritmo.
+        </p>
+        <a class="btn" href="contato.html">Solicitar cotação →</a>
+      </div>
+      <div class="media-hero" aria-label="Imagem editorial"></div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Visão</h3>
-      <p>
-        Ser referência em viagens de experiência e enoturismo, reconhecida pela excelência no planejamento,
-        pela sensibilidade nos detalhes e por roteiros que viram memória.
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <h3 style="text-align:center; font-size:2rem;">Nosso norte</h3>
+      <p class="kicker" style="text-align:center; max-width:820px; margin: 10px auto 0;">
+        O que guia cada decisão — do primeiro contato ao último detalhe da viagem.
       </p>
-    </div>
+      <hr class="sep"/>
 
-    <div class="card">
-      <h3>Valores</h3>
-      <ul class="list">
-        <li>Atendimento próximo e humano</li>
-        <li>Curadoria e autenticidade</li>
-        <li>Conforto com leveza</li>
-        <li>Transparência e confiança</li>
-        <li>Planejamento sem improviso</li>
-        <li>Respeito ao tempo e ao estilo de cada viajante</li>
-      </ul>
+      <div class="grid3" style="margin-top:22px;">
+        <article class="card">
+          <div class="card-body">
+            <h4 class="card-title">Missão</h4>
+            <p class="card-text">
+              Criar viagens sob medida, com curadoria cuidadosa e atendimento humano, conectando pessoas a experiências
+              autênticas com conforto e propósito.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h4 class="card-title">Visão</h4>
+            <p class="card-text">
+              Ser referência em viagens de experiência e enoturismo, reconhecida pela excelência no planejamento,
+              pela sensibilidade nos detalhes e por roteiros que viram memória.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h4 class="card-title">Valores</h4>
+            <p class="card-text" style="margin-bottom:0;">
+              Atendimento próximo · Curadoria · Autenticidade · Transparência · Planejamento sem improviso ·
+              Respeito ao tempo e ao estilo do viajante.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center;">
+    <div>© F&F Travel — Viagens de Experiência</div>
+    <div>
+      <a href="https://wa.me/5511949361782" target="_blank">WhatsApp</a> ·
+      <a href="https://www.instagram.com/turistareviajar/" target="_blank">@turistareviajar</a>
     </div>
   </div>
-</section>
-
-<footer>
-  <p>F&F Travel — Viagens de Experiência</p>
-  <p>
-    <a href="https://wa.me/5511949361782">WhatsApp</a> |
-    <a href="https://www.instagram.com/turistareviajar/" target="_blank">@turistareviajar</a>
-  </p>
 </footer>
+
+<a class="whats-float" href="https://wa.me/5511949361782" target="_blank" aria-label="Falar no WhatsApp">
+  <span class="whats-dot"></span>
+  <span>Falar no WhatsApp</span>
+</a>
 
 </body>
 </html>
