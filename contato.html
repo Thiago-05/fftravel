@@ -1,10 +1,144 @@
-<form action="https://formspree.io/f/mzdgapbk" method="POST">
-  <input type="hidden" name="_next" value="https://thiago-05.github.io/fftravel/obrigado.html">
-  <input type="hidden" name="_subject" value="Novo contato pelo site — F&F Travel">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato | F&F Travel</title>
+  <link rel="stylesheet" href="style.css?v=30" />
 
-  <input class="input" name="nome" type="text" required placeholder="Nome">
-  <input class="input" name="email" type="email" required placeholder="E-mail">
-  <textarea class="input" name="mensagem" rows="5" required placeholder="Mensagem"></textarea>
+  <meta name="description" content="Fale com a F&F Travel e solicite sua curadoria. Vamos desenhar sua próxima experiência com atenção aos detalhes.">
+  <meta property="og:title" content="Contato — F&F Travel">
+  <meta property="og:description" content="Vamos desenhar sua próxima experiência? Solicite sua curadoria.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thiago-05.github.io/fftravel/contato.html">
+  <meta property="og:image" content="https://thiago-05.github.io/fftravel/assets/hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
 
-  <button type="submit" class="btn" style="justify-content:center;">Enviar →</button>
-</form>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">F&F TRAVEL</a>
+    <nav class="navlinks">
+      <a href="sobre.html">Sobre nós</a>
+      <a href="grupos.html">Viagens em grupo exclusivas</a>
+      <a href="blog.html">Dicas</a>
+      <a href="depoimentos.html">Depoimentos</a>
+      <a class="nav-cta" href="contato.html">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container split">
+      <!-- Lado esquerdo -->
+      <div class="panel fade-in">
+        <p class="kicker">Contato</p>
+        <h2 style="font-size:2.6rem; margin-top:6px;">Vamos desenhar sua próxima experiência?</h2>
+        <p style="color:var(--muted); margin-top:12px;">
+          Conte seu estilo, o ritmo que você gosta e o que quer viver. Nós cuidamos do resto — com curadoria e calma.
+        </p>
+
+        <a class="btn" href="https://wa.me/5511949361782" target="_blank">Falar no WhatsApp →</a>
+
+        <p class="kicker" style="margin-top:14px;">
+          Instagram:
+          <a href="https://www.instagram.com/turistareviajar/" target="_blank" style="border-bottom:1px solid rgba(185,149,99,.55);">
+            @turistareviajar
+          </a>
+        </p>
+
+        <p class="kicker" style="margin-top:10px;">
+          WhatsApp: <strong style="color:var(--ink);">+55 11 94936-1782</strong>
+        </p>
+      </div>
+
+      <!-- Lado direito -->
+      <div class="panel fade-in">
+        <h3 style="font-size:1.6rem;">Formulário</h3>
+        <p class="kicker" style="margin-top:6px;">Retornaremos assim que possível.</p>
+
+        <!-- FORM ÚNICO -->
+        <form id="contactForm" action="https://formspree.io/f/SEU_CODIGO" method="POST"
+              style="margin-top:14px; display:grid; gap:10px;">
+
+          <input type="hidden" name="_subject" value="Novo contato pelo site — F&F Travel">
+
+          <input class="input" name="nome" type="text" required placeholder="Nome">
+          <input class="input" name="email" type="email" required placeholder="E-mail">
+          <textarea class="input" name="mensagem" rows="5" required placeholder="Mensagem"></textarea>
+
+          <button id="submitBtn" type="submit" class="btn" style="justify-content:center;">
+            Enviar →
+          </button>
+
+          <p id="formStatus" class="kicker" style="margin-top:6px;"></p>
+        </form>
+
+        <hr class="sep" style="margin-top:18px;">
+        <p class="kicker" style="margin-top:12px;">
+          Se preferir, fale direto no WhatsApp. Nós respondemos o quanto antes.
+        </p>
+        <a class="btn secondary" href="https://wa.me/5511949361782" target="_blank">Ir para WhatsApp →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center;">
+    <div>© F&F Travel — Viagens de Experiência</div>
+    <div>
+      <a href="https://wa.me/5511949361782" target="_blank">WhatsApp</a> ·
+      <a href="https://www.instagram.com/turistareviajar/" target="_blank">@turistareviajar</a>
+    </div>
+  </div>
+</footer>
+
+<a class="whats-float" href="https://wa.me/5511949361782" target="_blank" aria-label="Falar no WhatsApp">
+  <span class="whats-dot"></span>
+  <span>Falar no WhatsApp</span>
+</a>
+
+<script>
+  const form = document.getElementById("contactForm");
+  const statusEl = document.getElementById("formStatus");
+  const btn = document.getElementById("submitBtn");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    statusEl.textContent = "Enviando...";
+    btn.disabled = true;
+    btn.style.opacity = "0.7";
+
+    try {
+      const formData = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (response.ok) {
+        statusEl.textContent = "Mensagem enviada com sucesso. Obrigada! 💛";
+        form.reset();
+
+        // Redireciona para sua página em português:
+        window.location.href = "obrigado.html";
+      } else {
+        statusEl.textContent = "Não foi possível enviar agora. Tente novamente ou fale no WhatsApp.";
+      }
+    } catch (err) {
+      statusEl.textContent = "Erro de conexão. Tente novamente ou fale no WhatsApp.";
+    } finally {
+      btn.disabled = false;
+      btn.style.opacity = "1";
+    }
+  });
+</script>
+
+</body>
+</html>
