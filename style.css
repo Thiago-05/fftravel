@@ -271,3 +271,66 @@ hr.sep{border:none; border-top:1px solid var(--line); margin: 18px 0 0;}
 }
 .hero::before{filter: saturate(.92) contrast(.98) brightness(1.03);}
 .card-media, .media-hero, .highlight-photo, .post-hero{filter: saturate(.92) contrast(.98) brightness(1.02);}
+
+/* ===== MOBILE REFINEMENTS ===== */
+@media (max-width: 720px){
+  .container{padding: 0 16px;}
+  .section{padding: 54px 0;}
+
+  /* Header / menu mais limpo no celular */
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 0;
+  }
+  .navlinks{
+    width: 100%;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  .navlinks a{
+    font-size: .92rem;
+    padding: 7px 10px;
+  }
+
+  /* Hero mais “editorial” no mobile */
+  .hero{min-height: 70vh;}
+  .hero-inner{padding: 56px 0;}
+  .hero-card{
+    max-width: 100%;
+    padding: 22px 18px;
+  }
+  .hero h2{font-size: 2.1rem;}
+  .hero p{font-size: 1rem;}
+
+  /* Botões mais confortáveis */
+  .btn{
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Cards e painéis */
+  .card-body{padding: 16px;}
+  .panel{padding: 20px;}
+
+  /* Imagens de blocos */
+  .media-hero{height: 240px;}
+  .highlight-photo{min-height: 240px;}
+
+  /* WhatsApp flutuante menor pra não atrapalhar */
+  .whats-float{
+    right: 12px;
+    bottom: 12px;
+    padding: 10px 12px;
+  }
+}
+
+/* Mobile bem pequeno */
+@media (max-width: 420px){
+  .hero h2{font-size: 1.95rem;}
+  .navlinks{gap: 8px;}
+  .navlinks a{font-size: .9rem;}
+}
+
+
