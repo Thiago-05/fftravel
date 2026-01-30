@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contato | F&F Travel</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
 
@@ -24,6 +24,7 @@
 <main>
   <section class="section">
     <div class="container split">
+      <!-- Painel esquerdo (texto + contatos) -->
       <div class="panel">
         <p class="kicker">Contato</p>
         <h2 style="font-size:2.6rem; margin-top:6px;">Vamos desenhar sua próxima experiência?</h2>
@@ -37,41 +38,38 @@
 
         <p class="kicker" style="margin-top:14px;">
           Instagram:
-          <a href="https://www.instagram.com/turistareviajar/" target="_blank" style="border-bottom:1px solid rgba(185,149,99,.55);">
+          <a href="https://www.instagram.com/turistareviajar/" target="_blank"
+             style="border-bottom:1px solid rgba(185,149,99,.55);">
             @turistareviajar
           </a>
         </p>
-      </div>
-
-      <div class="panel">
-        <h3 style="font-size:1.6rem;">Formulário</h3>
-        <p class="kicker" style="margin-top:6px;">(Visual — podemos ativar envio depois)</p>
-
-        <form action="https://formspree.io/f/mzdgapbk" method="POST" style="margin-top:14px; display:grid; gap:10px;" > <input type="hidden" name="_next" value="https://thiago-05.github.io/fftravel/obrigado.html">
-
-  <input name="nome" type="text" required placeholder="Nome"
-    style="padding:12px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(251,248,243,.9);">
-
-  <input name="email" type="email" required placeholder="E-mail"
-    style="padding:12px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(251,248,243,.9);">
-
-  <textarea name="mensagem" rows="5" required placeholder="Mensagem"
-    style="padding:12px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(251,248,243,.9);"></textarea>
-
-  <button type="submit" class="btn" style="justify-content:center;">Enviar →</button>
-
-  <input type="hidden" name="_subject" value="Novo contato pelo site — F&F Travel">
-</form>
-
-          <input type="text" placeholder="Nome" style="padding:12px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(251,248,243,.9);">
-          <input type="email" placeholder="E-mail" style="padding:12px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(251,248,243,.9);">
-          <textarea rows="5" placeholder="Mensagem" style="padding:12px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(251,248,243,.9);"></textarea>
-          <button type="button" class="btn" style="justify-content:center;">Enviar →</button>
-        </form>
 
         <p class="kicker" style="margin-top:10px;">
-          Preferir? Fale direto no WhatsApp: <strong style="color:var(--ink);">+55 11 94936-1782</strong>
+          WhatsApp: <strong style="color:var(--ink);">+55 11 94936-1782</strong>
         </p>
+      </div>
+
+      <!-- Painel direito (ÚNICO formulário - Formspree) -->
+      <div class="panel">
+        <h3 style="font-size:1.6rem;">Formulário</h3>
+        <p class="kicker" style="margin-top:6px;">Retornaremos assim que possível.</p>
+
+        <form action="https://formspree.io/f/mzdgapbk" method="POST" style="margin-top:14px; display:grid; gap:10px;">
+          <!-- redireciona para a página obrigado -->
+          <input type="hidden" name="_next" value="https://thiago-05.github.io/fftravel/obrigado.html">
+          <input type="hidden" name="_subject" value="Novo contato pelo site — F&F Travel">
+
+          <input name="nome" type="text" required placeholder="Nome"
+            style="padding:12px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(251,248,243,.9);">
+
+          <input name="email" type="email" required placeholder="E-mail"
+            style="padding:12px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(251,248,243,.9);">
+
+          <textarea name="mensagem" rows="5" required placeholder="Mensagem"
+            style="padding:12px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(251,248,243,.9);"></textarea>
+
+          <button type="submit" class="btn" style="justify-content:center;">Enviar →</button>
+        </form>
       </div>
     </div>
   </section>
@@ -94,5 +92,3 @@
 
 </body>
 </html>
-
-
