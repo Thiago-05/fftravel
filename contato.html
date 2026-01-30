@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contato | F&F Travel</title>
-<link rel="stylesheet" href="style.css?v=60" />
-
+  <link rel="stylesheet" href="style.css?v=80" />
 
   <meta name="description" content="Fale com a F&F Travel e solicite sua curadoria. Vamos desenhar sua próxima experiência com atenção aos detalhes.">
   <meta property="og:title" content="Contato — F&F Travel">
@@ -15,6 +14,7 @@
   <meta property="og:image" content="https://thiago-05.github.io/fftravel/assets/hero.jpg">
   <meta name="twitter:card" content="summary_large_image">
 </head>
+
 <body>
 
 <header class="site-header">
@@ -37,6 +37,7 @@
       <div class="panel fade-in">
         <p class="kicker">Contato</p>
         <h2 style="font-size:2.6rem; margin-top:6px;">Vamos desenhar sua próxima experiência?</h2>
+
         <p style="color:var(--muted); margin-top:12px;">
           Conte seu estilo, o ritmo que você gosta e o que quer viver. Nós cuidamos do resto — com curadoria e calma.
         </p>
@@ -45,7 +46,8 @@
 
         <p class="kicker" style="margin-top:14px;">
           Instagram:
-          <a href="https://www.instagram.com/turistareviajar/" target="_blank" style="border-bottom:1px solid rgba(185,149,99,.55);">
+          <a href="https://www.instagram.com/turistareviajar/" target="_blank"
+             style="border-bottom:1px solid rgba(185,149,99,.55);">
             @turistareviajar
           </a>
         </p>
@@ -60,26 +62,27 @@
         <h3 style="font-size:1.6rem;">Formulário</h3>
         <p class="kicker" style="margin-top:6px;">Retornaremos assim que possível.</p>
 
-        <!-- FORM ÚNICO (envio normal, estável) -->
-        <form action="https://formspree.io/f/mzdgapbk" method="POST"
-              style="margin-top:14px; display:grid; gap:10px;">
+        <!-- FORM ÚNICO -->
+        <form id="contactForm" style="margin-top:14px; display:grid; gap:10px;">
+          <!-- Honeypot anti-spam (invisível) -->
+          <input type="text" name="_gotcha" autocomplete="off" tabindex="-1"
+                 style="position:absolute; left:-9999px; opacity:0;" aria-hidden="true">
 
-          <!-- Redireciona para sua página em PT (evita a tela em inglês do Formspree) -->
-          <input type="hidden" name="_next" value="https://thiago-05.github.io/fftravel/obrigado.html">
-          <input type="hidden" name="_subject" value="Novo contato pelo site — F&F Travel">
-          <input type="hidden" name="_language" value="pt-BR">
+          <input class="input" id="nome" name="nome" type="text" required placeholder="Nome">
+          <input class="input" id="email" name="email" type="email" required placeholder="E-mail">
+          <textarea class="input" id="mensagem" name="mensagem" rows="5" required placeholder="Mensagem"></textarea>
 
-          <input class="input" name="nome" type="text" required placeholder="Nome">
-          <input class="input" name="email" type="email" required placeholder="E-mail">
-          <textarea class="input" name="mensagem" rows="5" required placeholder="Mensagem"></textarea>
-
-          <button type="submit" class="btn" style="justify-content:center;">
+          <button id="submitBtn" type="submit" class="btn" style="justify-content:center;">
             Enviar →
           </button>
 
-          <p class="kicker" style="margin-top:6px;">
-            Ao enviar, você será direcionado para a página de confirmação.
-          </p>
+          <p id="formStatus" class="kicker" style="margin-top:6px;"></p>
+
+          <noscript>
+            <p class="kicker" style="margin-top:10px;">
+              Para enviar o formulário, ative o JavaScript no navegador.
+            </p>
+          </noscript>
         </form>
 
         <hr class="sep" style="margin-top:18px;">
@@ -107,6 +110,62 @@
   <span>Falar no WhatsApp</span>
 </a>
 
+<script>
+  const ENDPOINT = "https://formspree.io/f/mzdgapbk";
+
+  const form = document.getElementById("contactForm");
+  const statusEl = document.getElementById("formStatus");
+  const btn = document.getElementById("submitBtn");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Honeypot anti-spam
+    const gotcha = form.querySelector('input[name="_gotcha"]')?.value;
+    if (gotcha) return;
+
+    statusEl.textContent = "Enviando...";
+    btn.disabled = true;
+    btn.style.opacity = "0.7";
+
+    const payload = {
+      nome: document.getElementById("nome").value.trim(),
+      email: document.getElementById("email").value.trim(),
+      mensagem: document.getElementById("mensagem").value.trim(),
+      _subject: "Novo contato pelo site — F&F Travel"
+    };
+
+    try {
+      const res = await fetch(ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (res.ok) {
+        // Redireciona para sua página (fica igual em PC e celular)
+        window.location.href = "obrigado.html";
+        return;
+      }
+
+      // Tenta ler erro (quando existe)
+      let data = null;
+      try { data = await res.json(); } catch (_) {}
+      console.log("Formspree error:", res.status, data);
+
+      statusEl.textContent = "Não foi possível enviar agora. Tente novamente ou fale no WhatsApp.";
+    } catch (err) {
+      console.log("Network error:", err);
+      statusEl.textContent = "Erro de conexão. Tente novamente ou fale no WhatsApp.";
+    } finally {
+      btn.disabled = false;
+      btn.style.opacity = "1";
+    }
+  });
+</script>
+
 </body>
 </html>
-
