@@ -1,56 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Depoimentos | F&F Travel</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <h1>F&F Travel</h1>
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="sobre.html">Sobre</a>
-    <a href="grupos.html">Viagens em Grupo</a>
-    <a href="blog.html">Dicas</a>
-    <a href="depoimentos.html">Depoimentos</a>
-    <a href="contato.html">Contato</a>
-  </nav>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">F&F TRAVEL</a>
+    <nav class="navlinks">
+      <a href="sobre.html">Sobre nós</a>
+      <a href="grupos.html">Viagens em grupo exclusivas</a>
+      <a href="blog.html">Dicas</a>
+      <a href="depoimentos.html">Depoimentos</a>
+      <a class="nav-cta" href="contato.html">Contato</a>
+    </nav>
+  </div>
 </header>
 
-<section>
-  <h2 class="page-title">Depoimentos</h2>
-
-  <p style="text-align:center; max-width:900px; margin: 0 auto;">
-    Histórias reais de quem viajou com a F&F Travel. (Aqui você vai colando os depoimentos conforme receber.)
-  </p>
-
-  <div class="cards" style="margin-top:50px;">
-    <div class="card">
-      <p>“A viagem foi impecável do começo ao fim. Cada detalhe pensado com carinho, sem correria e com experiências incríveis.”</p>
-      <p><strong>— Nome Sobrenome</strong> | Cidade/UF</p>
+<main>
+  <section class="section">
+    <div class="container">
+      <p class="kicker">Depoimentos</p>
+      <h2 style="font-size:2.6rem; margin-top:6px;">Quando o cuidado vira memória</h2>
+      <p style="color:var(--muted); max-width:860px; margin-top:12px;">
+        Textos curtos, verdadeiros e emocionais — do jeito que o luxo é percebido: pelo detalhe.
+      </p>
     </div>
+  </section>
 
-    <div class="card">
-      <p>“A curadoria de hotéis e restaurantes foi perfeita. Eu só precisei aproveitar — e foi exatamente o que eu queria.”</p>
-      <p><strong>— Nome Sobrenome</strong> | Cidade/UF</p>
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <hr class="sep"/>
+
+      <div class="grid3" style="margin-top:22px;">
+        <article class="card"><div class="card-body">
+          <p style="font-family: ui-serif, Georgia, serif; font-size:1.1rem;">
+            “Cada detalhe da viagem foi pensado com extremo cuidado. Uma experiência impecável.”
+          </p>
+          <p class="kicker" style="margin-top:10px;">— Mariana · Itália & França</p>
+        </div></article>
+
+        <article class="card"><div class="card-body">
+          <p style="font-family: ui-serif, Georgia, serif; font-size:1.1rem;">
+            “A curadoria de hotéis e restaurantes foi perfeita. Eu só precisei aproveitar.”
+          </p>
+          <p class="kicker" style="margin-top:10px;">— Eduardo · Portugal</p>
+        </div></article>
+
+        <article class="card"><div class="card-body">
+          <p style="font-family: ui-serif, Georgia, serif; font-size:1.1rem;">
+            “Atendimento humano, planejamento excelente e experiências que fogem do óbvio.”
+          </p>
+          <p class="kicker" style="margin-top:10px;">— Camila · Mediterrâneo</p>
+        </div></article>
+      </div>
+
+      <div style="text-align:center; margin-top:26px;">
+        <a class="btn" href="https://wa.me/5511949361782" target="_blank">Enviar depoimento →</a>
+      </div>
     </div>
+  </section>
+</main>
 
-    <div class="card">
-      <p>“Enoturismo com propósito: aprendi muito e vivi momentos memoráveis. Atendimento humano e planejamento excelente.”</p>
-      <p><strong>— Nome Sobrenome</strong> | Cidade/UF</p>
+<footer class="footer">
+  <div class="container" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center;">
+    <div>© F&F Travel — Viagens de Experiência</div>
+    <div>
+      <a href="https://wa.me/5511949361782" target="_blank">WhatsApp</a> ·
+      <a href="https://www.instagram.com/turistareviajar/" target="_blank">@turistareviajar</a>
     </div>
   </div>
-
-  <div style="text-align:center; margin-top:40px;">
-    <a class="btn" href="https://wa.me/5511949361782">Enviar meu depoimento no WhatsApp</a>
-  </div>
-</section>
-
-<footer>
-  <p>F&F Travel — Viagens de Experiência</p>
 </footer>
+
+<a class="whats-float" href="https://wa.me/5511949361782" target="_blank" aria-label="Falar no WhatsApp">
+  <span class="whats-dot"></span>
+  <span>Falar no WhatsApp</span>
+</a>
 
 </body>
 </html>
