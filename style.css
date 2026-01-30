@@ -28,7 +28,7 @@ a{color:inherit; text-decoration:none;}
 .kicker{color: var(--muted); font-size: .95rem;}
 hr.sep{border:none; border-top:1px solid var(--line); margin: 18px 0 0;}
 
-/* Micro animações (luxo discreto) */
+/* Micro animações */
 @media (prefers-reduced-motion: no-preference){
   .fade-in{animation: fadeIn .55s ease both;}
   @keyframes fadeIn{from{opacity:0; transform: translateY(6px);} to{opacity:1; transform:none;}}
@@ -74,7 +74,7 @@ hr.sep{border:none; border-top:1px solid var(--line); margin: 18px 0 0;}
   padding: 8px 14px !important;
 }
 
-/* Hero (com fallback de imagem local -> unsplash) */
+/* Hero (fallback local -> unsplash) */
 .hero{
   position: relative;
   min-height: 64vh;
@@ -89,7 +89,7 @@ hr.sep{border:none; border-top:1px solid var(--line); margin: 18px 0 0;}
   background:
     linear-gradient(90deg, rgba(244,239,232,.92) 0%, rgba(244,239,232,.70) 45%, rgba(244,239,232,.10) 100%),
     url("assets/hero.jpg"),
-    url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2400&q=70");
+    url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2400&q=80");
   background-size: cover, cover, cover;
   background-position: center, center, center;
   background-repeat: no-repeat, no-repeat, no-repeat;
@@ -172,7 +172,7 @@ hr.sep{border:none; border-top:1px solid var(--line); margin: 18px 0 0;}
   box-shadow: var(--shadow);
 }
 
-/* Media hero (fallback) */
+/* Media hero (fallback local -> unsplash) */
 .media-hero{
   height: 320px;
   border-radius: var(--radius);
@@ -180,13 +180,13 @@ hr.sep{border:none; border-top:1px solid var(--line); margin: 18px 0 0;}
   box-shadow: var(--shadow);
   background:
     url("assets/sobre.jpg"),
-    url("https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1600&q=70");
+    url("https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=2000&q=80");
   background-size: cover, cover;
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
 }
 
-/* Highlight (fallback) */
+/* Highlight (fallback local -> unsplash) */
 .highlight{
   display:grid;
   grid-template-columns: .95fr 1.05fr;
@@ -201,7 +201,7 @@ hr.sep{border:none; border-top:1px solid var(--line); margin: 18px 0 0;}
   min-height: 320px;
   background:
     url("assets/grupos.jpg"),
-    url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1600&q=70");
+    url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=2000&q=80");
   background-size: cover, cover;
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
