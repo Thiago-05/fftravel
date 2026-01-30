@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contato | F&F Travel</title>
-  <link rel="stylesheet" href="style.css?v=30" />
+  <link rel="stylesheet" href="style.css?v=40" />
 
   <meta name="description" content="Fale com a F&F Travel e solicite sua curadoria. Vamos desenhar sua próxima experiência com atenção aos detalhes.">
   <meta property="og:title" content="Contato — F&F Travel">
@@ -59,21 +59,26 @@
         <h3 style="font-size:1.6rem;">Formulário</h3>
         <p class="kicker" style="margin-top:6px;">Retornaremos assim que possível.</p>
 
-        <!-- FORM ÚNICO -->
-        <form id="contactForm" action="https://formspree.io/f/mzdgapbk" method="POST"
+        <!-- FORM ÚNICO (envio normal, estável) -->
+        <form action="https://formspree.io/f/mzdgapbk" method="POST"
               style="margin-top:14px; display:grid; gap:10px;">
 
+          <!-- Redireciona para sua página em PT (evita a tela em inglês do Formspree) -->
+          <input type="hidden" name="_next" value="https://thiago-05.github.io/fftravel/obrigado.html">
           <input type="hidden" name="_subject" value="Novo contato pelo site — F&F Travel">
+          <input type="hidden" name="_language" value="pt-BR">
 
           <input class="input" name="nome" type="text" required placeholder="Nome">
           <input class="input" name="email" type="email" required placeholder="E-mail">
           <textarea class="input" name="mensagem" rows="5" required placeholder="Mensagem"></textarea>
 
-          <button id="submitBtn" type="submit" class="btn" style="justify-content:center;">
+          <button type="submit" class="btn" style="justify-content:center;">
             Enviar →
           </button>
 
-          <p id="formStatus" class="kicker" style="margin-top:6px;"></p>
+          <p class="kicker" style="margin-top:6px;">
+            Ao enviar, você será direcionado para a página de confirmação.
+          </p>
         </form>
 
         <hr class="sep" style="margin-top:18px;">
@@ -101,45 +106,5 @@
   <span>Falar no WhatsApp</span>
 </a>
 
-<script>
-  const form = document.getElementById("contactForm");
-  const statusEl = document.getElementById("formStatus");
-  const btn = document.getElementById("submitBtn");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    statusEl.textContent = "Enviando...";
-    btn.disabled = true;
-    btn.style.opacity = "0.7";
-
-    try {
-      const formData = new FormData(form);
-
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: { "Accept": "application/json" }
-      });
-
-      if (response.ok) {
-        statusEl.textContent = "Mensagem enviada com sucesso. Obrigada! 💛";
-        form.reset();
-
-        // Redireciona para sua página em português:
-        window.location.href = "obrigado.html";
-      } else {
-        statusEl.textContent = "Não foi possível enviar agora. Tente novamente ou fale no WhatsApp.";
-      }
-    } catch (err) {
-      statusEl.textContent = "Erro de conexão. Tente novamente ou fale no WhatsApp.";
-    } finally {
-      btn.disabled = false;
-      btn.style.opacity = "1";
-    }
-  });
-</script>
-
 </body>
 </html>
-
