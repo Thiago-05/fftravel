@@ -47,7 +47,21 @@
         <h3 style="font-size:1.6rem;">Formulário</h3>
         <p class="kicker" style="margin-top:6px;">(Visual — podemos ativar envio depois)</p>
 
-        <form style="margin-top:14px; display:grid; gap:10px;">
+        <form action="https://formspree.io/f/mzdgapbk" method="POST" style="margin-top:14px; display:grid; gap:10px;">
+  <input name="nome" type="text" required placeholder="Nome"
+    style="padding:12px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(251,248,243,.9);">
+
+  <input name="email" type="email" required placeholder="E-mail"
+    style="padding:12px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(251,248,243,.9);">
+
+  <textarea name="mensagem" rows="5" required placeholder="Mensagem"
+    style="padding:12px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(251,248,243,.9);"></textarea>
+
+  <button type="submit" class="btn" style="justify-content:center;">Enviar →</button>
+
+  <input type="hidden" name="_subject" value="Novo contato pelo site — F&F Travel">
+</form>
+
           <input type="text" placeholder="Nome" style="padding:12px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(251,248,243,.9);">
           <input type="email" placeholder="E-mail" style="padding:12px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(251,248,243,.9);">
           <textarea rows="5" placeholder="Mensagem" style="padding:12px 12px; border-radius:12px; border:1px solid var(--line); background:rgba(251,248,243,.9);"></textarea>
@@ -79,3 +93,4 @@
 
 </body>
 </html>
+
