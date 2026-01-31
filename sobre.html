@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sobre nós | F&F Travel</title>
-  <link rel="stylesheet" href="style.css?v=100" />
-  <meta name="description" content="A F&F Travel cria viagens sob medida e em grupo com olhar curatorial, atenção aos detalhes e experiências memoráveis.">
+  <link rel="stylesheet" href="style.css?v=110" />
 </head>
 <body>
 
 <header class="site-header">
   <div class="container navbar">
     <a class="brand" href="index.html">F&F TRAVEL</a>
+
     <nav class="navlinks">
       <a href="index.html">Início</a>
       <a class="active" href="sobre.html">Sobre nós</a>
@@ -20,16 +20,27 @@
       <a href="depoimentos.html">Depoimentos</a>
       <a class="nav-cta" href="contato.html">Contato</a>
     </nav>
+
+    <button class="menu-btn" data-menu-btn aria-expanded="false" aria-label="Abrir menu">Menu</button>
+  </div>
+
+  <div class="container mobile-nav" data-mobile-nav>
+    <a href="index.html">Início</a>
+    <a class="active" href="sobre.html">Sobre nós</a>
+    <a href="grupos.html">Viagens em grupo exclusivas</a>
+    <a href="blog.html">Dicas</a>
+    <a href="depoimentos.html">Depoimentos</a>
+    <a href="contato.html">Contato</a>
   </div>
 </header>
 
 <main>
-  <section class="hero" style="min-height:68vh; background-image:url('assets/uruguai-1.jpeg');">
+  <section class="hero" style="min-height:68vh; background-image:url('assets/uruguai-3.jpeg');">
     <div class="container hero-inner">
-      <div class="hero-card fade-in" style="max-width:720px;">
+      <div class="hero-card fade-in" style="max-width:760px;">
         <p class="kicker">Sobre nós</p>
-        <h2>Curadoria de viagens com alma e intenção</h2>
-        <p style="color:var(--muted); margin-top:10px;">
+        <h2>Curadoria com alma e intenção</h2>
+        <p style="color:var(--muted); margin-top:12px; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;">
           A F&F Travel nasceu do desejo de transformar viagens em experiências memoráveis.
           Atuamos como desenhadores designers, criando roteiros sob medida e viagens em grupo cuidadosamente desenhadas,
           sempre com olhar curatorial, parceiros selecionados e atenção aos detalhes.
@@ -37,13 +48,12 @@
 
         <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
           <a class="btn" href="contato.html">Solicitar cotação →</a>
-          <a class="btn secondary" href="https://wa.me/5511949361782" target="_blank" rel="noopener">Falar no WhatsApp →</a>
+          <a class="btn secondary" href="https://wa.me/5511949361782" target="_blank" rel="noopener">WhatsApp →</a>
         </div>
 
         <p class="kicker" style="margin-top:14px;">
           Instagram:
-          <a href="https://www.instagram.com/fftravel.oficial/" target="_blank" rel="noopener"
-             style="border-bottom:1px solid rgba(185,149,99,.55);">
+          <a href="https://www.instagram.com/fftravel.oficial/" target="_blank" rel="noopener" style="border-bottom:1px solid rgba(185,149,99,.55);">
             @fftravel.oficial
           </a>
         </p>
@@ -52,11 +62,11 @@
   </section>
 
   <section class="section">
-    <div class="container split">
+    <div class="container grid" style="grid-template-columns:repeat(3,1fr);">
       <div class="panel fade-in">
         <p class="kicker">Missão</p>
         <h3 style="margin-top:6px;">Criar experiências memoráveis</h3>
-        <p style="color:var(--muted); margin-top:10px;">
+        <p class="notice" style="margin-top:10px;">
           Transformar desejos em roteiros bem pensados, com conforto, autenticidade e tranquilidade do início ao fim.
         </p>
       </div>
@@ -64,7 +74,7 @@
       <div class="panel fade-in">
         <p class="kicker">Visão</p>
         <h3 style="margin-top:6px;">Ser referência em curadoria</h3>
-        <p style="color:var(--muted); margin-top:10px;">
+        <p class="notice" style="margin-top:10px;">
           Ser reconhecida por viagens com repertório, estética e organização impecável — sem pressa e sem improviso.
         </p>
       </div>
@@ -72,8 +82,8 @@
       <div class="panel fade-in">
         <p class="kicker">Valores</p>
         <h3 style="margin-top:6px;">Detalhe, verdade e cuidado</h3>
-        <p style="color:var(--muted); margin-top:10px;">
-          Atenção aos detalhes, transparência, sensibilidade na escolha de experiências e respeito ao tempo do viajante.
+        <p class="notice" style="margin-top:10px;">
+          Atenção aos detalhes, transparência e escolhas que respeitam o tempo do viajante.
         </p>
       </div>
     </div>
@@ -91,9 +101,9 @@
 </footer>
 
 <a class="whats-float" href="https://wa.me/5511949361782" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-  <span class="whats-dot"></span>
-  <span>Falar no WhatsApp</span>
+  <span class="whats-dot"></span><span>Falar no WhatsApp</span>
 </a>
 
+<script src="main.js?v=110"></script>
 </body>
 </html>
