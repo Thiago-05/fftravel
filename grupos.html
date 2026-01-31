@@ -4,76 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Viagens em grupo exclusivas | F&F Travel</title>
-<link rel="stylesheet" href="style.css?v=90" />
-
-
-
-  <meta name="description" content="Viagens em grupo exclusivas: grupos pequenos, curadoria grande, experiências diferenciadas.">
-  <meta property="og:title" content="Viagens em grupo exclusivas — F&F Travel">
-  <meta property="og:description" content="Grupos pequenos, roteiros diferenciados e curadoria.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://thiago-05.github.io/fftravel/grupos.html">
-  <meta property="og:image" content="https://thiago-05.github.io/fftravel/assets/hero.jpg">
-  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css?v=110" />
 </head>
 <body>
 
 <header class="site-header">
   <div class="container navbar">
     <a class="brand" href="index.html">F&F TRAVEL</a>
+
     <nav class="navlinks">
+      <a href="index.html">Início</a>
       <a href="sobre.html">Sobre nós</a>
-      <a href="grupos.html">Viagens em grupo exclusivas</a>
+      <a class="active" href="grupos.html">Viagens em grupo exclusivas</a>
       <a href="blog.html">Dicas</a>
       <a href="depoimentos.html">Depoimentos</a>
       <a class="nav-cta" href="contato.html">Contato</a>
     </nav>
+
+    <button class="menu-btn" data-menu-btn aria-expanded="false" aria-label="Abrir menu">Menu</button>
+  </div>
+
+  <div class="container mobile-nav" data-mobile-nav>
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre nós</a>
+    <a class="active" href="grupos.html">Viagens em grupo exclusivas</a>
+    <a href="blog.html">Dicas</a>
+    <a href="depoimentos.html">Depoimentos</a>
+    <a href="contato.html">Contato</a>
   </div>
 </header>
 
 <main>
-  <section class="section">
-    <div class="container">
-      <p class="kicker">Viagens em grupo exclusivas</p>
-      <h2 style="font-size:2.6rem; margin-top:6px;">Grupos pequenos. Curadoria grande.</h2>
-      <p style="color:var(--muted); max-width:860px; margin-top:12px;">
-        Roteiros autorais e experiências que fogem do comum — com planejamento completo, conforto e ritmo pensado.
-      </p>
-      <a class="btn" href="contato.html">Quero receber novidades →</a>
+  <section class="hero" style="min-height:64vh; background-image:url('assets/uruguai-2.jpeg');">
+    <div class="container hero-inner" style="min-height:64vh;">
+      <div class="hero-card fade-in" style="max-width:760px;">
+        <p class="kicker">Viagens em grupo exclusivas</p>
+        <h2>Projetos desenhados para viver com leveza</h2>
+        <p style="color:var(--muted); margin-top:12px; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;">
+          Grupos pequenos, experiências selecionadas e ritmo confortável. Sem preço na cara — a conversa é com intenção.
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+          <a class="btn" href="contato.html">Quero receber informações →</a>
+          <a class="btn secondary" href="https://wa.me/5511949361782" target="_blank" rel="noopener">WhatsApp →</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="section" style="padding-top:0;">
+  <section class="section">
     <div class="container">
-      <hr class="sep"/>
+      <p class="kicker">Projetos</p>
+      <h3 style="margin-top:6px;">Seleção atual</h3>
 
-      <div class="grid3" style="margin-top:22px;">
-        <article class="card">
-          <div class="card-media" style="background-image:url('assets/grupos.jpg'), url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=2000&q=80');"></div>
+      <div class="grid" style="margin-top:14px;">
+        <div class="card">
+          <img src="assets/uruguai-1.jpeg" alt="Vinhos do Uruguai" loading="lazy">
           <div class="card-body">
-            <h4 class="card-title">Vinhos do Uruguai — Montevidéu</h4>
-            <p class="card-text">Enoturismo cuidadosamente desenhado com vinícolas, alta gastronomia e hospedagem boutique.</p>
-            <a class="card-link" href="uruguai.html">Quero receber informações →</a>
+            <p class="kicker">Projeto em grupo</p>
+            <h4 style="margin-top:6px;">Vinhos do Uruguai — Montevidéu</h4>
+            <p style="color:var(--muted); margin-top:6px;">
+              Vinícolas, gastronomia e atmosfera uruguaia com curadoria.
+            </p>
+            <div style="margin-top:12px;">
+              <a class="btn" href="uruguai.html">Ver detalhes →</a>
+            </div>
           </div>
-        </article>
+        </div>
 
-        <article class="card">
-          <div class="card-media" style="background-image:url('assets/personalizadas.jpg'), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=80');"></div>
+        <div class="card">
+          <img src="assets/mediterraneo-1.jpeg" alt="Mediterrâneos" loading="lazy">
           <div class="card-body">
-            <h4 class="card-title">Em breve</h4>
-            <p class="card-text">Novos projetos autorais. Entre na lista para receber primeiro.</p>
-            <a class="card-link" href="contato.html">Entrar na lista →</a>
+            <p class="kicker">Inspiração</p>
+            <h4 style="margin-top:6px;">Mediterrâneos</h4>
+            <p style="color:var(--muted); margin-top:6px;">
+              Um olhar editorial para ilhas e costa, com ritmo certo.
+            </p>
+            <div style="margin-top:12px;">
+              <a class="btn secondary" href="post-mediterraneo.html">Ler post →</a>
+            </div>
           </div>
-        </article>
+        </div>
 
-        <article class="card">
-          <div class="card-media" style="background-image:url('assets/curadoria.jpg'), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2000&q=80');"></div>
+        <div class="card">
+          <img src="assets/enoturismo-1.jpeg" alt="Enoturismo" loading="lazy">
           <div class="card-body">
-            <h4 class="card-title">Seu grupo, do seu jeito</h4>
-            <p class="card-text">Quer viajar com amigos? Criamos um projeto exclusivo para o seu grupo.</p>
-            <a class="card-link" href="contato.html">Falar com a curadoria →</a>
+            <p class="kicker">Inspiração</p>
+            <h4 style="margin-top:6px;">Enoturismo</h4>
+            <p style="color:var(--muted); margin-top:6px;">
+              Degustação, paisagem e tempo bonito — sem correria.
+            </p>
+            <div style="margin-top:12px;">
+              <a class="btn secondary" href="post-enoturismo.html">Ler post →</a>
+            </div>
           </div>
-        </article>
+        </div>
       </div>
     </div>
   </section>
@@ -83,14 +107,16 @@
   <div class="container" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center;">
     <div>© F&F Travel — Viagens de Experiência</div>
     <div>
-      <a href="https://wa.me/5511949361782" target="_blank">WhatsApp</a> ·
-      <a href="https://www.instagram.com/turistareviajar/" target="_blank">@turistareviajar</a>
+      <a href="https://wa.me/5511949361782" target="_blank" rel="noopener">WhatsApp</a> ·
+      <a href="https://www.instagram.com/fftravel.oficial/" target="_blank" rel="noopener">@fftravel.oficial</a>
     </div>
   </div>
 </footer>
 
-<a class="whats-float" href="https://wa.me/5511949361782" target="_blank"><span class="whats-dot"></span><span>Falar no WhatsApp</span></a>
+<a class="whats-float" href="https://wa.me/5511949361782" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <span class="whats-dot"></span><span>Falar no WhatsApp</span>
+</a>
+
+<script src="main.js?v=110"></script>
 </body>
 </html>
-
-
