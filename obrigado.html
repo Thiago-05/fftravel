@@ -4,70 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mensagem enviada | F&F Travel</title>
-
-  <meta name="description" content="Mensagem enviada com sucesso. Em breve retornaremos. Se preferir, fale conosco agora no WhatsApp.">
-  <meta property="og:title" content="Mensagem enviada — F&F Travel">
-  <meta property="og:description" content="Recebemos sua mensagem e vamos retornar em breve.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://thiago-05.github.io/fftravel/obrigado.html">
-  <meta property="og:image" content="https://thiago-05.github.io/fftravel/assets/hero.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- aumentei o v= para forçar atualização no celular -->
-  <link rel="stylesheet" href="style.css?v=90" />
-
-
-  <style>
-    /* micro-ajustes só desta página (mobile) */
-    @media (max-width: 720px){
-      .hero{ min-height: 72vh; }
-      .hero-card{ padding: 20px 16px !important; }
-      .thanks-actions{ flex-direction: column; }
-      .thanks-actions .btn{ width: 100%; justify-content: center; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css?v=110" />
 </head>
 <body>
 
 <header class="site-header">
   <div class="container navbar">
     <a class="brand" href="index.html">F&F TRAVEL</a>
+
     <nav class="navlinks">
+      <a href="index.html">Início</a>
       <a href="sobre.html">Sobre nós</a>
       <a href="grupos.html">Viagens em grupo exclusivas</a>
       <a href="blog.html">Dicas</a>
       <a href="depoimentos.html">Depoimentos</a>
       <a class="nav-cta" href="contato.html">Contato</a>
     </nav>
+
+    <button class="menu-btn" data-menu-btn aria-expanded="false" aria-label="Abrir menu">Menu</button>
+  </div>
+
+  <div class="container mobile-nav" data-mobile-nav>
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre nós</a>
+    <a href="grupos.html">Viagens em grupo exclusivas</a>
+    <a href="blog.html">Dicas</a>
+    <a href="depoimentos.html">Depoimentos</a>
+    <a href="contato.html">Contato</a>
   </div>
 </header>
 
 <main>
-  <section class="hero" style="min-height:72vh;">
-    <div class="container hero-inner">
-      <div class="hero-card fade-in" style="max-width:680px; text-align:center; margin-inline:auto;">
+  <section class="hero" style="min-height:72vh; background-image:url('assets/repertorio-2.jpeg');">
+    <div class="container hero-inner" style="min-height:72vh;">
+      <div class="hero-card fade-in" style="max-width:720px; text-align:center; margin-inline:auto;">
         <p class="kicker">Mensagem enviada</p>
-        <h2>Obrigada por entrar em contato</h2>
-        <p style="color: var(--muted);">
-          Recebemos sua mensagem e vamos retornar em breve.
-          Se preferir, fale conosco agora no WhatsApp.
+        <h2 style="margin-top:8px;">Obrigada por entrar em contato</h2>
+        <p class="notice" style="margin-top:10px;">
+          Recebemos sua mensagem e vamos retornar em breve. Se preferir, fale conosco agora no WhatsApp.
         </p>
 
-        <div class="thanks-actions" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:14px;">
+        <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:14px;">
           <a class="btn" href="https://wa.me/5511949361782" target="_blank" rel="noopener">Falar no WhatsApp →</a>
           <a class="btn secondary" href="index.html">Voltar para o início →</a>
         </div>
 
-        <p class="kicker" style="margin-top:16px;">
+        <p class="kicker" style="margin-top:14px;">
           Instagram:
-          <a href="https://www.instagram.com/turistareviajar/" target="_blank" rel="noopener"
-             style="border-bottom:1px solid rgba(185,149,99,.55);">
-            @turistareviajar
+          <a href="https://www.instagram.com/fftravel.oficial/" target="_blank" rel="noopener" style="border-bottom:1px solid rgba(185,149,99,.55);">
+            @fftravel.oficial
           </a>
-        </p>
-
-        <p class="kicker" style="margin-top:10px;">
-          Se quiser, envie também o destino e as datas desejadas para agilizar a curadoria.
         </p>
       </div>
     </div>
@@ -79,15 +65,15 @@
     <div>© F&F Travel — Viagens de Experiência</div>
     <div>
       <a href="https://wa.me/5511949361782" target="_blank" rel="noopener">WhatsApp</a> ·
-      <a href="https://www.instagram.com/turistareviajar/" target="_blank" rel="noopener">@turistareviajar</a>
+      <a href="https://www.instagram.com/fftravel.oficial/" target="_blank" rel="noopener">@fftravel.oficial</a>
     </div>
   </div>
 </footer>
 
 <a class="whats-float" href="https://wa.me/5511949361782" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-  <span class="whats-dot"></span>
-  <span>Falar no WhatsApp</span>
+  <span class="whats-dot"></span><span>Falar no WhatsApp</span>
 </a>
 
+<script src="main.js?v=110"></script>
 </body>
 </html>
