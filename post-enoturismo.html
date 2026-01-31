@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Enoturismo | F&F Travel</title>
-  <link rel="stylesheet" href="style.css?v=100" />
-  <meta name="description" content="Enoturismo: como viver experiências de vinho com curadoria, ritmo leve e escolhas certeiras.">
+  <link rel="stylesheet" href="style.css?v=110" />
 </head>
 <body>
 
 <header class="site-header">
   <div class="container navbar">
     <a class="brand" href="index.html">F&F TRAVEL</a>
+
     <nav class="navlinks">
       <a href="index.html">Início</a>
       <a href="sobre.html">Sobre nós</a>
@@ -20,22 +20,32 @@
       <a href="depoimentos.html">Depoimentos</a>
       <a class="nav-cta" href="contato.html">Contato</a>
     </nav>
+
+    <button class="menu-btn" data-menu-btn aria-expanded="false" aria-label="Abrir menu">Menu</button>
+  </div>
+
+  <div class="container mobile-nav" data-mobile-nav>
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre nós</a>
+    <a href="grupos.html">Viagens em grupo exclusivas</a>
+    <a class="active" href="blog.html">Dicas</a>
+    <a href="depoimentos.html">Depoimentos</a>
+    <a href="contato.html">Contato</a>
   </div>
 </header>
 
 <main>
-  <section class="hero" style="min-height:68vh; background-image:url('assets/enoturismo-1.jpeg');">
-    <div class="container hero-inner">
-      <div class="hero-card fade-in" style="max-width:760px;">
+  <section class="hero" style="min-height:64vh; background-image:url('assets/enoturismo-1.jpeg');">
+    <div class="container hero-inner" style="min-height:64vh;">
+      <div class="hero-card fade-in" style="max-width:780px;">
         <p class="kicker">Dicas</p>
         <h2>Enoturismo</h2>
-        <p style="color:var(--muted); margin-top:10px;">
-          Um roteiro de vinho bem desenhado é aquele que equilibra paisagem, degustação e tempo — sem correria.
+        <p style="color:var(--muted); margin-top:12px; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;">
+          Um roteiro de vinho bem desenhado equilibra paisagem, degustação e tempo — sem correria.
         </p>
-
         <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
           <a class="btn" href="contato.html">Quero uma curadoria →</a>
-          <a class="btn secondary" href="blog.html">Voltar para Dicas →</a>
+          <a class="btn secondary" href="blog.html">Voltar →</a>
         </div>
       </div>
     </div>
@@ -44,43 +54,33 @@
   <section class="section">
     <div class="container" style="max-width:980px;">
       <h3>O que faz uma experiência de vinho ser inesquecível</h3>
-      <p style="color:var(--muted); margin-top:10px;">
-        Não é sobre “quantidade” de vinícolas — é sobre seleção. As melhores experiências são aquelas que
-        combinam um lugar bonito, uma história interessante, atendimento bom e um ritmo confortável.
+      <p class="notice" style="margin-top:10px;">
+        Não é sobre quantidade de vinícolas — é sobre seleção. Atendimento, história, paisagem e ritmo confortável.
       </p>
 
       <img src="assets/enoturismo-2.jpeg" alt="Enoturismo — experiência" loading="lazy"
-           style="width:100%; height:auto; display:block; border-radius:18px; margin-top:16px;">
+           style="border-radius:18px; margin-top:16px;">
 
       <h3 style="margin-top:18px;">Como escolher a região certa</h3>
-      <p style="color:var(--muted); margin-top:10px;">
-        Pense no tipo de viagem que você quer: mais gastronômica, mais romântica, mais natureza ou mais cidade.
-        A região ideal é aquela que conversa com o seu estilo — e com o tempo que você tem.
+      <p class="notice" style="margin-top:10px;">
+        Pense no estilo: mais gastronômico, mais romântico, mais natureza ou mais cidade. A região ideal conversa com você.
       </p>
 
       <img src="assets/enoturismo-3.jpeg" alt="Enoturismo — vinhedos" loading="lazy"
-           style="width:100%; height:auto; display:block; border-radius:18px; margin-top:16px;">
+           style="border-radius:18px; margin-top:16px;">
 
       <hr class="sep" style="margin-top:18px;">
 
       <div class="panel" style="margin-top:16px;">
         <p class="kicker">Pronto para planejar?</p>
         <h3 style="margin-top:6px;">Vamos desenhar seu roteiro de enoturismo</h3>
-        <p style="color:var(--muted); margin-top:8px;">
+        <p class="notice" style="margin-top:8px;">
           Conte destino, datas e o estilo de experiência que você busca. A curadoria começa por você.
         </p>
         <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
           <a class="btn" href="contato.html">Falar com a F&F →</a>
           <a class="btn secondary" href="https://wa.me/5511949361782" target="_blank" rel="noopener">WhatsApp →</a>
         </div>
-
-        <p class="kicker" style="margin-top:14px;">
-          Instagram:
-          <a href="https://www.instagram.com/fftravel.oficial/" target="_blank" rel="noopener"
-             style="border-bottom:1px solid rgba(185,149,99,.55);">
-            @fftravel.oficial
-          </a>
-        </p>
       </div>
     </div>
   </section>
@@ -97,9 +97,9 @@
 </footer>
 
 <a class="whats-float" href="https://wa.me/5511949361782" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-  <span class="whats-dot"></span>
-  <span>Falar no WhatsApp</span>
+  <span class="whats-dot"></span><span>Falar no WhatsApp</span>
 </a>
 
+<script src="main.js?v=110"></script>
 </body>
 </html>
