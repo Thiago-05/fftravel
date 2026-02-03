@@ -267,27 +267,3 @@ h4{ font-size: 20px; }
 /* Roteiro compacto (Uruguai) */
 .roteiro-compacto .card-body{ padding: 14px; }
 .roteiro-compacto h4{ margin-bottom: 0; }
-
-.ff-details{
-  border: 1px solid rgba(185,149,99,.22);
-  border-radius: 14px;
-  padding: 10px 12px;
-  background: rgba(255,255,255,.55);
-}
-
-.ff-details summary{
-  cursor: pointer;
-  font-weight: 600;
-  color: rgba(26,26,26,.85);
-  list-style: none;
-}
-
-.ff-details summary::-webkit-details-marker{ display:none; }
-.ff-details summary::after{
-  content: "＋";
-  float: right;
-  opacity: .75;
-}
-.ff-details[open] summary::after{ content: "－"; }
-
-.ff-details p, .ff-details li{ line-height: 1.45; }
