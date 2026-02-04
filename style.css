@@ -360,3 +360,18 @@ p{margin:0}
 .roteiro-card h4{
   margin-bottom: 6px;
 }
+
+/* Galeria Uruguai — cards sem "espaço em branco" */
+.galeria-grid .card {
+  height: 230px;           /* ajuste aqui: 210–280 fica ótimo */
+  padding: 0;
+  overflow: hidden;
+}
+
+.galeria-grid .card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
