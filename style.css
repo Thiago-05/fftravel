@@ -335,3 +335,28 @@ p{margin:0}
   padding-right: 0 !important;
 }
 
+/* Roteiro: grid mais editorial (sem buracos feios) */
+.roteiro-compacto{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 colunas no desktop */
+  gap: 18px;                                       /* espaço entre cards */
+  align-items: start;
+}
+
+/* Mobile: 1 coluna */
+@media (max-width: 900px){
+  .roteiro-compacto{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+/* Garante que cada card não fique “estreito” e mantenha consistência */
+.roteiro-card{
+  width: 100%;
+}
+
+/* (Opcional) um espacinho melhor entre título e texto dentro do card */
+.roteiro-card h4{
+  margin-bottom: 6px;
+}
