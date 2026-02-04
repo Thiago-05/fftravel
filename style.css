@@ -662,3 +662,32 @@ p{margin:0}
 .exp-list li{
   margin: 10px 0;  /* espaçamento entre itens */
 }
+
+/* HERO title: mobile = 2 linhas, desktop = 1 linha quando couber */
+.hero-title{
+  font-size: 48px;        /* mantém o tamanho atual (ajuste se necessário) */
+  line-height: 1.05;
+  margin: 0;
+}
+
+/* Faz a parte depois do título quebrar para a linha de baixo por padrão */
+.hero-title span{
+  display: block;        /* mobile -> quebra em 2 linhas */
+  font-weight: 700;
+}
+
+/* Desktop: tenta manter tudo em ONE-LINE */
+@media (min-width: 860px){
+  .hero-title{
+    white-space: nowrap;  /* força tentativa de 1 linha (se couber) */
+    font-size: 48px;      /* ajusta conforme seu layout, se quiser maior/diminuir) */
+  }
+  .hero-title span{
+    display: inline;      /* volta a ficar na mesma linha no desktop */
+  }
+}
+
+/* Ajuste fino para tablets e pequenas larguras (opcional) */
+@media (max-width: 460px){
+  .hero-title{ font-size: 30px; } /* reduz um pouco no celular bem estreito */
+}
