@@ -285,3 +285,37 @@ p{margin:0}
   .hero-inner{min-height:62vh; padding:58px 0 44px}
   .grid{grid-template-columns:1fr}
 }
+
+/* Roteiro (Visão editorial) - mais compacto */
+.roteiro-card .card-body{
+  padding: 14px;
+}
+
+.roteiro-text{
+  color: var(--muted);
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* Limita a altura do conteúdo e cria scroll interno suave */
+.roteiro-card .roteiro-text{
+  max-height: 210px;
+  overflow: auto;
+  padding-right: 6px;
+}
+
+/* Listas mais “finas” */
+.roteiro-text ul{
+  margin: 8px 0 12px 18px;
+}
+.roteiro-text li{
+  margin: 6px 0;
+}
+
+/* No celular: ainda mais compacto */
+@media (max-width: 900px){
+  .roteiro-text{ font-size: 13px; }
+  .roteiro-card .roteiro-text{ max-height: 190px; }
+}
+
