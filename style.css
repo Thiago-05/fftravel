@@ -498,3 +498,63 @@ p{margin:0}
 .roteiro-compacto > *{
   align-self: start;
 }
+
+/* =========================================================
+   ROTEIRO (Visão editorial) — layout “masonry” (colunas)
+   Cole no FINAL do style.css
+   ========================================================= */
+
+/* Container vira colunas (masonry) */
+.roteiro-compacto{
+  column-count: 2;
+  column-gap: 22px;
+}
+
+/* No mobile vira 1 coluna */
+@media (max-width: 860px){
+  .roteiro-compacto{
+    column-count: 1;
+    column-gap: 14px;
+  }
+}
+
+/* Cada card vira “bloco” dentro das colunas */
+.roteiro-compacto .roteiro-card{
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 22px;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* Ajuste de espaçamento no mobile */
+@media (max-width: 860px){
+  .roteiro-compacto .roteiro-card{
+    margin-bottom: 14px;
+  }
+}
+
+/* Tipografia/espacinho do texto dentro */
+.roteiro-card .roteiro-text{
+  margin-top: 8px;
+  line-height: 1.55;
+}
+
+.roteiro-card .roteiro-text p{
+  margin: 10px 0;
+}
+
+.roteiro-card .roteiro-text ul{
+  margin: 8px 0 0 18px;
+  padding: 0;
+}
+
+.roteiro-card .roteiro-text li{
+  margin: 6px 0;
+}
