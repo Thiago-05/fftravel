@@ -691,3 +691,15 @@ p{margin:0}
 @media (max-width: 460px){
   .hero-title{ font-size: 30px; } /* reduz um pouco no celular bem estreito */
 }
+
+.inclui-lista{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.inclui-lista li{
+  margin: 8px 0;
+}
