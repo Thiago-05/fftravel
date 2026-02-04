@@ -636,4 +636,16 @@ p{margin:0}
 }
 
 
+/* HERO — título sempre em 1 linha e sem estourar o card */
+.hero-title{
+  white-space: nowrap;
+  font-size: clamp(26px, 3.6vw, 48px);
+  line-height: 1.05;
+  max-width: 100%;
+}
+
+/* garante que o card não permita overflow “vazar” */
+.hero-card{
+  overflow: hidden;
+}
 
