@@ -649,3 +649,16 @@ p{margin:0}
   overflow: hidden;
 }
 
+/* A experiência — lista bem separadinha */
+.exp-list{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.exp-list li{
+  margin: 10px 0;  /* espaçamento entre itens */
+}
