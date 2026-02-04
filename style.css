@@ -389,3 +389,40 @@ p{margin:0}
   object-fit: cover;
 }
 
+/* ROTEIRO — cards com altura automática + espaçamento consistente */
+.roteiro-compacto{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;                 /* espaço entre cards */
+  align-items: start;         /* NÃO estica cards */
+}
+
+/* no mobile: 1 coluna */
+@media (max-width: 860px){
+  .roteiro-compacto{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+/* garante que o card cresça conforme o conteúdo */
+.roteiro-card{
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+/* melhora o “respiro” interno do texto */
+.roteiro-text{
+  margin-top: 8px;
+  line-height: 1.55;
+}
+
+/* listas do roteiro mais compactas e bonitas */
+.roteiro-text ul{
+  margin: 8px 0 0 18px;
+  padding: 0;
+}
+.roteiro-text li{
+  margin: 6px 0;
+}
