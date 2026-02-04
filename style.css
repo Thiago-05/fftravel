@@ -617,3 +617,23 @@ p{margin:0}
   display: block;
 }
 
+<p class="valor-line" style="margin-top:10px; color:var(--ink); font-size:22px; line-height:1.25; font-style:italic;">
+  Em quarto duplo – <strong>R$ 10.262,07</strong> | Em quarto single – <strong>R$ 11.667,07</strong>
+</p>
+
+
+@media (max-width: 520px){
+  .hero-title{ white-space: normal; }
+}
+
+/* VALOR: mantém tudo em 1 linha */
+.valor-line{
+  white-space: nowrap;
+}
+
+@media (max-width: 520px){
+  .valor-line{ white-space: normal; }
+}
+
+
+
