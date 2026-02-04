@@ -592,3 +592,28 @@ p{margin:0}
   overflow: visible !important;
 }
 
+/* =========================
+   DICAS — cards sem “vazio”
+   ========================= */
+
+.dicas-grid{
+  align-items: start;
+}
+
+.dicas-grid .card{
+  height: auto !important;
+  align-self: start;
+}
+
+.dicas-grid .card-body{
+  height: auto !important;
+}
+
+/* Mantém as imagens bonitas e consistentes */
+.dicas-grid .card img{
+  width: 100%;
+  height: 240px;     /* pode ajustar: 200–280 */
+  object-fit: cover;
+  display: block;
+}
+
