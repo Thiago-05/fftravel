@@ -319,3 +319,19 @@ p{margin:0}
   .roteiro-card .roteiro-text{ max-height: 190px; }
 }
 
+/* Roteiro: cada card com altura do próprio conteúdo (sem esticar / sem scroll) */
+.roteiro-compacto{
+  align-items: start;         /* não estica os cards na linha */
+}
+
+.roteiro-card{
+  height: auto;
+  align-self: start;          /* garante que não estique */
+}
+
+.roteiro-card .roteiro-text{
+  max-height: none !important; /* remove limite */
+  overflow: visible !important;/* remove scrollbar */
+  padding-right: 0 !important;
+}
+
