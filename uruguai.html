@@ -1,22 +1,85 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vinhos do Uruguai — Montevidéu | F&F Travel</title>
-  <meta name="description" content="Vinhos do Uruguai — Montevidéu. Viagem em grupo com curadoria, vinícolas, degustações e gastronomia.">
-<link rel="stylesheet" href="style.css?v=999" />
+  <link rel="stylesheet" href="style.css?v=110" />
+
+  <!-- Ajustes específicos desta página (pode deixar aqui) -->
   <style>
-  .hero-title{
-  white-space: nowrap;
-  font-size: clamp(22px, 3.2vw, 44px);
-  line-height: 1.05;
-  max-width: 100%;
-}
+    /* HERO: 1 linha no desktop, quebra no mobile */
+    .hero-title{
+      white-space: nowrap;
+    }
+    @media (max-width: 720px){
+      .hero-title{
+        white-space: normal;
+      }
+    }
 
-</style>
+    /* ROTEIRO: grid estável e sem “vazamentos” */
+    .roteiro-compacto{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+    @media (max-width: 900px){
+      .roteiro-compacto{
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+    }
+    .roteiro-card{ height: auto; }
+    .roteiro-card .card-body{ padding: 16px 16px 18px; }
+    .roteiro-card h4{ margin-bottom: 6px; }
 
+    .roteiro-text{
+      margin-top: 8px;
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .roteiro-text p{ margin: 10px 0; }
+    .roteiro-text ul{ margin: 10px 0 0 18px; padding: 0; }
+    .roteiro-text li{ margin: 6px 0; }
+
+    /* “A experiência inclui” com espaçamento bonito */
+    .inclui-title{
+      margin-top: 12px;
+      font-weight: 700;
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    .inclui-list{
+      margin: 10px 0 0 18px;
+      padding: 0;
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.65;
+      font-size: 14px;
+    }
+    .inclui-list li{ margin: 10px 0; }
+
+    /* Linha de preço: evita quebra feia no desktop, mas deixa quebrar no mobile */
+    .price-line{
+      font-weight: 700;
+      margin-top: 6px;
+      font-size: 18px;
+      line-height: 1.25;
+      word-break: normal;
+    }
+    @media (min-width: 901px){
+      .price-line{ white-space: nowrap; }
+    }
+    @media (max-width: 900px){
+      .price-line{ white-space: normal; }
+    }
+  </style>
 </head>
+
 <body>
 
 <header class="site-header">
@@ -32,9 +95,7 @@
       <a class="nav-cta" href="contato.html">Contato</a>
     </nav>
 
-    <button class="menu-btn" data-menu-btn aria-expanded="false" aria-label="Abrir menu">
-      Menu
-    </button>
+    <button class="menu-btn" data-menu-btn aria-expanded="false" aria-label="Abrir menu">Menu</button>
   </div>
 
   <div class="container mobile-nav" data-mobile-nav>
@@ -52,134 +113,121 @@
   <!-- HERO -->
   <section class="hero" style="min-height:62vh; background-image:url('assets/uruguai-1.jpeg');">
     <div class="container hero-inner" style="min-height:62vh;">
-      <div class="hero-card fade-in" style="max-width:820px;">
-        <p class="kicker">Viagens em grupo exclusivas</p>
-<h1 class="hero-title" style="margin-top:10px;">
-  Vinhos do Uruguai <span>— Montevidéu</span>
-</h1>
+      <div class="hero-card fade-in" style="max-width:920px;">
+        <p class="kicker">VIAGENS EM GRUPO EXCLUSIVAS</p>
 
+        <h1 class="hero-title" style="margin-top:6px;">
+          Vinhos do Uruguai — Montevidéu
+        </h1>
 
         <p style="color:var(--muted); margin-top:12px; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;">
           Uma experiência de enoturismo cuidadosamente desenhada.
         </p>
 
-      
-
-        <p class="kicker" style="margin-top:14px;">
-          Instagram:
-          <a href="https://www.instagram.com/fftravel.oficial/" target="_blank" rel="noopener" style="border-bottom:1px solid rgba(185,149,99,.55);">
-            @fftravel.oficial
-          </a>
-        </p>
+        <p class="kicker" style="margin-top:14px;">INSTAGRAM: @FFTRAVEL.OFICIAL</p>
       </div>
     </div>
   </section>
 
-  <!-- INTRO / ESSÊNCIA -->
-  <section class="section">
-    <div class="container split">
-      <div class="panel fade-in">
-        <p class="kicker">A experiência</p>
-        <h3 style="margin-top:6px;">Um roteiro com ritmo e escolhas certeiras</h3>
-       <p style="color:var(--muted); margin-top:10px;">
-</p>
-
- <p style="color:var(--muted); margin-top:10px;">
-          A proposta é viver o Uruguai com calma: vinícolas selecionadas, degustações bem conduzidas,
-          almoços harmonizados e tempo livre para sentir a cidade no seu próprio tempo.
-        </p>
-
-
-        <div class="grid" style="margin-top:14px;">
-          <div class="card">
-            <div class="card-body">
-              <p class="kicker">Curadoria</p>
-              <p style="color:var(--muted); margin-top:6px;">
-                Vinícolas e experiências escolhidas a dedo, sem excesso.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <p class="kicker">Gastronomia</p>
-              <p style="color:var(--muted); margin-top:6px;">
-                Almoços harmonizados e momentos pensados para saborear.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <p class="kicker">Tempo livre</p>
-              <p style="color:var(--muted); margin-top:6px;">
-                Espaço para cafés, bairros e repertório — sem pressa.
-              </p>
-            </div>
-          </div>
-        </div>
-
-       
-      
-      </div>
-
-      <div class="card fade-in" style="overflow:hidden;">
-        <img src="assets/uruguai-2.jpeg" alt="Montevidéu e atmosfera uruguaia" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <!-- GALERIA / FOTOS -->
+  <!-- A EXPERIÊNCIA + VALOR -->
   <section class="section">
     <div class="container">
-      <p class="kicker">Imagens</p>
-      <h3 style="margin-top:6px;">Uma prévia do clima</h3>
+      <div class="split">
+        <div class="panel">
+          <p class="kicker">A experiência</p>
+          <h2 style="margin-top:6px;">Um roteiro com ritmo e escolhas certeiras</h2>
 
-      <!-- ✅ trocado para os seus nomes reais -->
-      <div class="grid galeria-grid" style="margin-top:14px;">
+          <p style="margin-top:10px; color:var(--muted);">
+            A proposta é viver o Uruguai com calma: vinícolas selecionadas, degustações bem conduzidas,
+            almoços harmonizados e tempo livre para sentir a cidade no seu próprio tempo.
+          </p>
 
-        <div class="card" style="overflow:hidden;">
-          <img src="assets/uruguai-galeria-1.jpeg" alt="Uruguai — prévia 1" loading="lazy">
+          <div class="grid" style="grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top:14px;">
+            <div class="card" style="box-shadow:none;">
+              <div class="card-body">
+                <p class="kicker">Curadoria</p>
+                <p style="margin-top:6px; color:var(--muted);">Vinícolas e experiências escolhidas a dedo, sem excesso.</p>
+              </div>
+            </div>
+            <div class="card" style="box-shadow:none;">
+              <div class="card-body">
+                <p class="kicker">Gastronomia</p>
+                <p style="margin-top:6px; color:var(--muted);">Almoços harmonizados e momentos pensados para saborear.</p>
+              </div>
+            </div>
+            <div class="card" style="box-shadow:none;">
+              <div class="card-body">
+                <p class="kicker">Tempo livre</p>
+                <p style="margin-top:6px; color:var(--muted);">Espaço para cafés, bairros e repertório — sem pressa.</p>
+              </div>
+            </div>
+          </div>
+
+          <hr class="sep" style="margin:16px 0;">
+
+          <p class="kicker">Valor por pessoa</p>
+          <p class="price-line">
+            Em quarto duplo — R$ 10.262,07 | Em quarto single — R$ 11.667,07
+          </p>
+
+          <p class="inclui-title">A experiência inclui:</p>
+          <ul class="inclui-list">
+            <li>Presença de um profissional da F&F Travel durante toda a viagem;</li>
+            <li>Transporte privativo para todas as vinícolas, bem como deslocamentos de ida e volta entre aeroporto e hotel;</li>
+            <li>Seguro viagem incluído para maior tranquilidade;</li>
+            <li>A logística foi pensada para garantir fluidez, segurança e conforto ao longo de todo o roteiro;</li>
+            <li>Hospedagem em hotel de padrão elevado, com localização estratégica e proposta alinhada ao perfil do viajante, oferecendo conforto, serviço e consistência com o conceito da viagem;</li>
+            <li>A presença de um especialista em vinhos, com aula introdutória no primeiro dia, agrega profundidade à vivência, ampliando o entendimento e o aproveitamento das degustações ao longo do roteiro.</li>
+          </ul>
         </div>
-        <div class="card" style="overflow:hidden;">
-          <img src="assets/uruguai-galeria-2.jpeg" alt="Uruguai — prévia 2" loading="lazy">
-        </div>
-        <div class="card" style="overflow:hidden;">
-          <img src="assets/uruguai-galeria-3.jpeg" alt="Uruguai — prévia 3" loading="lazy">
+
+        <div class="card" style="border-radius: var(--radius2);">
+          <img src="assets/uruguai-2.jpeg" alt="Vinhos do Uruguai" loading="lazy" style="height:100%; object-fit:cover;">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ROTEIRO (VISÃO EDITORIAL) -->
-  <section class="section" id="roteiro">
+  <hr class="sep">
+
+  <!-- ROTEIRO -->
+  <section class="section">
     <div class="container">
       <p class="kicker">Roteiro</p>
-      <h3 style="margin-top:6px;">Visão editorial</h3>
+      <h2 style="margin-top:6px;">Visão editorial</h2>
 
-<div class="roteiro-masonry" style="margin-top:14px;">
+      <div class="roteiro-compacto" style="margin-top:18px;">
 
-
-        <<div class="card">
-  <p class="kicker">DIA 27</p>
-  <h4>Chegada + aula com especialista (jantar)</h4>
-  <p>
-    Chegada e dia livre.<br><br>
-    À noite, aula com especialista em vinhos durante o jantar
-    <em>(não incluso no valor)</em>.
-  </p>
-</div>
-
-
-     <h4>Cidade + tempo livre</h4>
-<p>
-  Dia dedicado a explorar Montevidéu, com sugestões de passeios,
-  cafés e bairros para conhecer a cidade no seu ritmo.
-</p>
-
-
+        <!-- DIA 27 -->
         <div class="card roteiro-card">
           <div class="card-body">
-            <p class="kicker">Dia 29</p>
-            <h4 style="margin-top:6px;">Bodega Carrau + Bodega Bouza</h4>
+            <p class="kicker">DIA 27</p>
+            <h4>Chegada + aula com especialista (jantar)</h4>
+
+            <div class="roteiro-text">
+              <p><strong>Chegada e dia livre.</strong></p>
+              <p>À noite, aula com especialista em vinhos durante o jantar <em>(não incluso no valor)</em>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 28 -->
+        <div class="card roteiro-card">
+          <div class="card-body">
+            <p class="kicker">DIA 28</p>
+            <h4>Cidade + tempo livre</h4>
+
+            <div class="roteiro-text">
+              <p>Dia dedicado a explorar Montevidéu, com sugestões de passeios, cafés e bairros para conhecer a cidade no seu ritmo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIA 29 -->
+        <div class="card roteiro-card">
+          <div class="card-body">
+            <p class="kicker">DIA 29</p>
+            <h4>Bodega Carrau + Bodega Bouza</h4>
 
             <div class="roteiro-text">
               <p><strong>Tour à Bodega Carrau com Degustação Tradicional</strong></p>
@@ -191,99 +239,39 @@
 
               <p><strong>Tour à Bodega Bouza com Almoço Harmonizado</strong></p>
               <p>
-                A visita guiada percorre os vinhedos, a bodega e a cava, onde os visitantes conhecerão o processo de elaboração do vinho em suas diferentes etapas.
+                A visita guiada percorre os vinhedos, a bodega e a cava, onde os visitantes conhecerão o processo de elaboração do vinho.
                 Após a visita, o grupo segue para o restaurante para um almoço harmonizado de 3 etapas.
-                Em cada etapa, haverá duas opções de pratos para escolha e, conforme o prato selecionado, será servida uma taça do vinho mais adequado para a harmonização.
-                Durante o almoço, os visitantes degustam alguns dos principais pratos do cardápio enquanto conhecem diferentes vinhos da bodega.
               </p>
             </div>
           </div>
         </div>
 
-       <h4>Dia livre – sugestão de passeio</h4>
-<p>
-  Dia livre com sugestão de passeio
-  <em>(não incluso no valor)</em> para
-  Bodega Garzón e Punta del Este.
-</p>
-
-              <ul>
-                <li>Visita guiada pelos vinhedos, bodega e cava, onde os visitantes conhecerão o processo de elaboração do vinho em suas diferentes etapas</li>
-                <li>Após a visita, acesso ao Salão de Degustações para uma degustação assistida de 4 vinhos, acompanhados de pequenos bocados</li>
-              </ul>
-
-              <p><strong>Tour à Bodega Deicas com Almoço Atlantic Experience</strong></p>
-              <p>
-                Convidamos você a descobrir a Família Deicas, percorrer seus vinhedos, conhecer a cava histórica e degustar seus melhores vinhos.
-              </p>
-              <ul>
-                <li>Caminhada pelos parques e vinhedos, visita às construções históricas declaradas Monumento Histórico Nacional e uma degustação que percorre todas as linhas e estilos de vinhos da marca</li>
-                <li>Menu de 3 etapas, com pratos elaborados na cozinha sob a direção da chef Mercedes Deicas, terceira geração da família, especialmente criados para harmonizar com as linhas de vinhos jovens Atlántico Sur e Single Vineyard, combinando perfeitamente a proposta gastronômica com a essência de seus vinhos</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
+        <!-- DIA 30 (conforme você pediu) -->
         <div class="card roteiro-card">
           <div class="card-body">
-            <p class="kicker">Dia 31</p>
-            <h4 style="margin-top:6px;">Dia livre e despedida</h4>
-            <p class="roteiro-text">Dia livre para curtir a cidade e se despedir.</p>
+            <p class="kicker">DIA 30</p>
+            <h4>Dia livre — sugestão de passeio</h4>
+
+            <div class="roteiro-text">
+              <p>
+                Dia livre com sugestão de passeio <em>(não incluso no valor)</em> para <strong>Bodega Garzón</strong> e <strong>Punta del Este</strong>.
+              </p>
+            </div>
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
+        <!-- DIA 31 -->
+        <div class="card roteiro-card">
+          <div class="card-body">
+            <p class="kicker">DIA 31</p>
+            <h4>Dia livre e despedida</h4>
 
-  <!-- VALOR + O QUE INCLUI (antes do Próximo passo) -->
-<section class="section" id="valor-inclui">
-  <div class="container">
-    <div class="panel fade-in">
-
-      <p class="kicker">Valor por pessoa</p>
-      <h3 style="margin-top:6px; font-style:italic; font-weight:500;">
-        Em quarto duplo – <strong>R$ 10.262,07</strong> |
-        Em quarto single – <strong>R$ 11.667,07</strong>
-      </h3>
-
-      <p class="kicker" style="margin-top:18px;">A experiência inclui</p>
-
-      <ul class="inclui-lista" style="margin-top:10px;">
-        <li>Presença de um profissional da F&F Travel durante toda a viagem;</li>
-        <li>Transporte privativo para todas as vinícolas, bem como deslocamentos de ida e volta entre aeroporto e hotel;</li>
-        <li>Seguro viagem incluído para maior tranquilidade;</li>
-        <li>A logística foi pensada para garantir fluidez, segurança e conforto ao longo de todo o roteiro;</li>
-        <li>Hospedagem em hotel de padrão elevado, com localização estratégica e proposta alinhada ao perfil do viajante, oferecendo conforto, serviço e consistência com o conceito da viagem;</li>
-        <li>A presença de um especialista em vinhos, com aula introdutória no primeiro dia, agrega profundidade à vivência, ampliando o entendimento e o aproveitamento das degustações ao longo do roteiro.</li>
-      </ul>
-
-    </div>
-  </div>
-</section>
-
-
-  <!-- CTA FINAL -->
-  <section class="section">
-    <div class="container">
-      <div class="panel fade-in" style="text-align:center;">
-        <p class="kicker">Próximo passo</p>
-        <h3 style="margin-top:6px;">Fale conosco para reservar! Apenas 8 vagas disponíveis.</h3>
-        <p class="notice" style="margin-top:10px;">
-          Enviamos os detalhes e orientamos você com calma — sem pressa, sem excesso.
-        </p>
-
-        <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:14px;">
-          <a class="btn" href="contato.html">Falar com a F&F →</a>
-          <a class="btn secondary" href="https://wa.me/5511949361782" target="_blank" rel="noopener">WhatsApp →</a>
+            <div class="roteiro-text">
+              <p>Dia livre para curtir a cidade e se despedir.</p>
+            </div>
+          </div>
         </div>
 
-        <p class="kicker" style="margin-top:14px;">
-          Instagram:
-          <a href="https://www.instagram.com/fftravel.oficial/" target="_blank" rel="noopener" style="border-bottom:1px solid rgba(185,149,99,.55);">
-            @fftravel.oficial
-          </a>
-        </p>
       </div>
     </div>
   </section>
@@ -304,6 +292,6 @@
   <span class="whats-dot"></span><span>Falar no WhatsApp</span>
 </a>
 
-<script src="main.js?v=140"></script>
+<script src="main.js?v=110"></script>
 </body>
 </html>
