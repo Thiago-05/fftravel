@@ -5,6 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dicas | F&F Travel</title>
   <link rel="stylesheet" href="style.css?v=200" />
+
+  <!-- Ajuste só desta página (garante que resolve mesmo com cache do style.css) -->
+  <style>
+    /* DICAS: impede “coluna gigante” (não estica os cards) */
+    .cards-grid{ align-items: start !important; }
+
+    /* imagem com altura fixa e bonita */
+    .cards-grid .card img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+      display:block;
+    }
+
+    /* botão sempre no fim do card-body sem criar vazio feio */
+    .cards-grid .card-body{
+      display:flex;
+      flex-direction:column;
+    }
+    .cards-grid .card-body > div{
+      margin-top:auto;
+    }
+
+    /* garante que o card não force altura */
+    .cards-grid .card{
+      height:auto !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -57,7 +85,9 @@
   <section class="section">
     <div class="container">
 
-      <div class="grid">
+      <!-- AQUI está o grid com a classe correta -->
+      <div class="grid cards-grid" style="margin-top:14px;">
+
         <!-- POST 1 -->
         <div class="card">
           <img src="assets/enoturismo-1.jpeg" alt="Enoturismo" loading="lazy">
@@ -88,7 +118,7 @@
           </div>
         </div>
 
-        <!-- PROJETO (ATUALIZADO) -->
+        <!-- PROJETO (URUGUAI ATUALIZADO) -->
         <div class="card">
           <img src="assets/uruguai-2.jpeg" alt="Vinhos do Uruguai — Montevideo" loading="lazy">
           <div class="card-body">
@@ -110,6 +140,7 @@
             </div>
           </div>
         </div>
+
       </div>
 
       <div class="panel" style="margin-top:18px;">
