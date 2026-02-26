@@ -731,3 +731,24 @@ p{margin:0}
     margin-bottom: 14px;
   }
 }
+
+/* DICAS (blog.html) — não esticar cards */
+.cards-grid{
+  align-items: start; /* impede as colunas ficarem gigantes */
+}
+
+/* (opcional) imagem com altura fixa e bonita */
+.cards-grid .card img{
+  width: 100%;
+  height: 240px;     /* pode ajustar */
+  object-fit: cover;
+}
+
+/* (opcional) botão sempre no final sem criar “vazio” feio */
+.cards-grid .card-body{
+  display: flex;
+  flex-direction: column;
+}
+.cards-grid .card-body > div{
+  margin-top: auto;
+}
